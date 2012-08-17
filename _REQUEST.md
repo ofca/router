@@ -1,6 +1,8 @@
 # Request
 
 Request object represents incoming requests.
+This is simplified Request.
+
 Request properties:
 
 * ``xhr`` - if true, request was made by AJAX (had XMLHTTPRequest header - all modern libraries pass that header),
@@ -22,3 +24,6 @@ Request properties:
 * ``headers`` - array containing request headers in key-value pairs
 * ``query`` - array containing request query parameters (those received from request and from route definition)
 * ``post`` - array containing post parameters
+
+When request is made from console - call should look like ``index.php /foo/bar.html -var=value``
+Where first arguments is friendly link, all other arguments (prefixed with minus ``-``) will be threated as query parameters and will be available in ``Request`` object in ``Request::query`` property.
