@@ -1,8 +1,10 @@
-# Independent routing component from MOSS Framework
+# Router
 
+Independent routing component from MOSS Framework
 For licence details see Licence.md
 
-# Registering routes
+## Registering routes
+
 Each route is represented by ``RouteDefinition`` instance
 
 	$Route = new \lib\router\RouteDefinition($domain, $pattern, $controller, $arguments, $forceDirs);
@@ -24,7 +26,8 @@ Where:
 
 Additionaly ``RouteDefinitions`` can be limited to concrete schema (protocol) and/or method via ``RouteDefinition::setSchema()`` and ``RouteDefinition::setMethod()``
 
-# Resolving route
+## Resolving route
+
 After route registration, router is ready to resolve incoming requests whitch are represented by ``Request`` object.
 
 	$Request = new \lib\Request();
@@ -35,7 +38,7 @@ If unable to match ``Request`` to route, ``RouteException`` will be thrown.
 
 All data from incoming request and those received from route definition are available in Request object
 
-# Generating link
+## Generating link
 
 When generating links, router finds first matching route and uses defined pattern to create url. If no routes matches passed parameters, normal url is generated.
 
@@ -51,7 +54,7 @@ Where
 
 *   ``$direct`` if true, forces direct link (by default direct links are generated, this can be canged in router class),
 
-# Request object
+## Request object
 
 Request object represents incoming requests.
 Request properties:
