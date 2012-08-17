@@ -1,9 +1,11 @@
 <?php
 
-require 'lib/router/RouteException.php';
-require 'lib/router/Request.php';
-require 'lib/router/RouteDefinition.php';
-require 'lib/router/Router.php';
+require './lib/Request.php';
+require './lib/router/RouteException.php';
+require './lib/router/RouteDefinitionInterface.php';
+require './lib/router/RouteDefinition.php';
+require './lib/router/RouterInterface.php';
+require './lib/router/Router.php';
 
 $Router = new \lib\router\Router();
 
