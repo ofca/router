@@ -198,7 +198,7 @@ class Request {
 	 * For request outside /web/
 	 * Some hosts do not allow include from outside domains directory
 	 */
-	protected function hostCorrection() {
+	protected function  hostCorrection() {
 		if(!isset($_SERVER['REDIRECT_URL'])) {
 			return;
 		}
