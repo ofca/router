@@ -1,0 +1,7 @@
+<?php
+require_once __DIR__ . '/lib/Request.php';
+require_once __DIR__ . '/lib/router/RouteDefinitionInterface.php';
+require_once __DIR__ . '/lib/router/RouteDefinition.php';
+require_once __DIR__ . '/lib/router/RouteException.php';
+require_once __DIR__ . '/lib/router/RouterInterface.php';
+require_once __DIR__ . '/lib/router/Router.php';
