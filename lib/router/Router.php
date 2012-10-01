@@ -10,7 +10,7 @@ use
 /**
  * Router
  * Responsible for matching Request to route and URI creation
-
+ * 
  * @package Moss Core
  * @author  Michal Wachowski <wachowski.michal@gmail.com>
  */
@@ -171,9 +171,6 @@ class Router implements RouterInterface {
 			$url = '?' . http_build_query(array_merge(array('controller' => str_replace(array($this->moduleSeparator, '/'), '_', $identifier)), $arguments), null, '&');
 			if($this->direct || $direct) {
 				$url = rtrim($this->baseName, '/') . '/' . ltrim($url, './');
-			}
-			else {
-				$url = (strpos($url, '?') === 0 ? null : '.') . $url;
 			}
 		}
 
